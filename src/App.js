@@ -1,14 +1,13 @@
 import React from "react";
 import "./App.css";
+import LandingPage from "./pages/LandingPage";
 
-function App() {
+const App = () => {
 	return (
-		<div className='container'>
-			<header>
-				<h1 className='text-3xl font-bold underline'>Molacash!</h1>
-			</header>
+		<div className='min-h-screen bg-gray-100'>
+			<LandingPage />
 		</div>
 	);
-}
+};
 
 export default App;
