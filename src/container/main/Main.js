@@ -8,7 +8,7 @@ import Radio from "../../component/common/Radio";
 const Main = () => {
 	return (
 		<>
-			<div id='produk' className='-mt-48 min-h-screen w-full lg:-mt-44'>
+			<div id='produk' className='z-50 -mt-64 min-h-screen w-full lg:-mt-44'>
 				<div className='mx-auto h-fit rounded-xl bg-white shadow-xl md:w-10/12 lg:w-1/2'>
 					<h2 className='pt-14 pb-14 text-center text-xl md:text-2xl'>
 						Form Pinjaman Dana Tunai
@@ -38,7 +38,7 @@ const Main = () => {
 							<InputField
 								inputName='email'
 								inputLabel='Alamat Email'
-								inputPlaceholder='Ketika Alamat Email Aktif'
+								inputPlaceholder='Ketik Alamat Email Aktif'
 								inputType='email'
 							/>
 						</fieldset>
@@ -47,7 +47,7 @@ const Main = () => {
 							<InputField
 								inputName='domisili'
 								inputLabel='Kota/Kabupaten Domisili'
-								inputPlaceholder='Ketika Kota/Kab. Sesuai KTP'
+								inputPlaceholder='Ketik Kota/Kab. Sesuai KTP'
 								inputType='email'
 							/>
 						</fieldset>
@@ -101,7 +101,7 @@ const Main = () => {
 						<fieldset className='mx-auto w-5/6 lg:w-4/5'>
 							<p className='mt-5 flex w-fit flex-row items-center gap-2 rounded-xl border-2 border-yellow-400 px-6 py-2 text-center'>
 								<img src={noticeIcon} alt='An icon with exclamation mark' />
-								<span>
+								<span className='text-sm'>
 									Periksa kembali data pengajuan Anda, pastikan data telah
 									sesuai.
 								</span>
