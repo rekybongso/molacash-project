@@ -8,7 +8,7 @@ import Radio from "../../component/common/Radio";
 const Main = () => {
 	return (
 		<>
-			<div id='produk' className='z-50 -mt-64 min-h-screen w-full lg:-mt-44'>
+			<div id='produk' className='z-40 -mt-64 min-h-screen w-full lg:-mt-44'>
 				<div className='mx-auto h-fit rounded-xl bg-white shadow-xl md:w-10/12 lg:w-1/2'>
 					<h2 className='pt-14 pb-14 text-center text-xl md:text-2xl'>
 						Form Pinjaman Dana Tunai
