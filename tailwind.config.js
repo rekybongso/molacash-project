@@ -9,8 +9,9 @@ module.exports = {
 				"primary-blue": "#00A1E1",
 				"secondary-blue": "#62E0F6",
 				"primary-teal": "#CAFCFD",
+				"green-tea": "#AFE375",
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require("@tailwindcss/forms")],
 };

@@ -9,8 +9,8 @@ const Header = () => {
 					src={logoMolacash}
 					alt='Molacash Dana Tunai'
 				/>
-				<p className='text-center italic md:-mt-5 md:ml-20 md:text-left md:text-xl lg:ml-28'>
-					Pinjaman aman, cepat, tanpa ribet
+				<p className='text-center italic text-gray-700 md:-mt-9 md:ml-20 md:text-left md:text-lg lg:ml-28'>
+					Pinjaman aman, Cepat, Tanpa ribet
 				</p>
 			</div>
 		</header>
