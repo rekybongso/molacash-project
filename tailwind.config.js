@@ -21,6 +21,7 @@ module.exports = {
 				"secondary-blue": "#002854",
 				"primary-teal": "#CAFCFD",
 				"green-tea": "#AFE375",
+				"orange-juice": "#FF9410",
 			},
 		},
 	},

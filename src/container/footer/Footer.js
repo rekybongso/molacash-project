@@ -6,12 +6,14 @@ import TwitterIcon from "../../component/icons/TwitterIcon";
 import YTIcon from "../../component/icons/YTIcon";
 import LocationIcon from "../../component/icons/LocationIcon";
 import logoMolacash from "../../assets/img/logo-molacash.png";
+import SubscribeSection from "../../component/section/SubscribeSection";
 
 const Footer = () => {
 	return (
 		<>
-			<div className='mt-9 grid grid-flow-row gap-5 bg-gray-300 p-7 md:gap-3 lg:grid-flow-col lg:grid-cols-5'>
-				<div>
+			<SubscribeSection />
+			<div className='grid grid-flow-row gap-5 bg-gray-300 p-7 md:gap-3 lg:grid-flow-col lg:grid-cols-5'>
+				<div id='faq-section'>
 					<img
 						className='w-32'
 						src={logoMolacash}

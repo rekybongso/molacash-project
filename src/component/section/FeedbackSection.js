@@ -5,7 +5,9 @@ import Radio from "../common/Radio";
 
 const FeedbackSection = () => {
 	return (
-		<section className='mt-5 mb-5 flex w-full flex-row justify-center'>
+		<section
+			id='kontak-section'
+			className='mt-5 mb-5 flex w-full flex-row justify-center'>
 			<div className='w-4/5 rounded-3xl bg-gradient-radial-to-bl from-sky-300 to-white p-10 shadow-xl lg:w-2/3'>
 				<h3 className='text-center font-bold text-secondary-blue lg:text-xl'>
 					Hai 👋, Yuk Bantu Molacash Agar Terus Berkembang

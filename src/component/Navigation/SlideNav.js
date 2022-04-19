@@ -1,5 +1,6 @@
 import React from "react";
 import BrandLogo from "../icons/BrandLogo";
+import { HashLink } from "react-router-hash-link";
 import { useGlobalContext } from "../context/GlobalContext";
 
 const SlideNav = () => {
@@ -34,7 +35,6 @@ const SlideNav = () => {
 				</button>
 			</nav>
 			<div
-				onClick={() => setSlideState(false)}
 				className={`fixed right-0 top-0 z-50 flex h-full w-72 transform flex-col gap-7 border-2 bg-gray-100 p-5 text-center transition-all duration-300 ease-in-out lg:hidden ${
 					slideMenu ? "translate-x-0" : "translate-x-full"
 				}`}>
@@ -53,16 +53,24 @@ const SlideNav = () => {
 				</button>
 				<ul className='border-b-2'>
 					<li className='cursor-pointer rounded-lg px-4 py-2 hover:text-primary-blue'>
-						Produk
+						<HashLink smooth to='/#produk-section'>
+							Produk
+						</HashLink>
 					</li>
 					<li className='cursor-pointer rounded-lg px-4 py-2 hover:text-primary-blue'>
-						Promo
+						<HashLink smooth to='/#promo-section'>
+							Promo
+						</HashLink>
 					</li>
 					<li className='cursor-pointer rounded-lg px-4 py-2 hover:text-primary-blue'>
-						Kontak
+						<HashLink smooth to='/#kontak-section'>
+							Kontak
+						</HashLink>
 					</li>
-					<li className='cursor-pointer rounded-lg px-4 py-2 pb-5 hover:text-primary-blue'>
-						FAQ
+					<li className='cursor-pointer rounded-lg px-4 py-2 hover:text-primary-blue'>
+						<HashLink smooth to='/#faq-section'>
+							FAQ
+						</HashLink>
 					</li>
 				</ul>
 				<ul>
