@@ -58,6 +58,9 @@ const SlideNav = () => {
 					<li className='cursor-pointer rounded-lg px-4 py-2 hover:text-primary-blue'>
 						Promo
 					</li>
+					<li className='cursor-pointer rounded-lg px-4 py-2 hover:text-primary-blue'>
+						Kontak
+					</li>
 					<li className='cursor-pointer rounded-lg px-4 py-2 pb-5 hover:text-primary-blue'>
 						FAQ
 					</li>

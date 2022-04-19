@@ -15,6 +15,9 @@ const TopNav = () => {
 						Promo
 					</li>
 					<li className='cursor-pointer rounded-lg px-4 py-2 hover:text-primary-blue'>
+						Kontak
+					</li>
+					<li className='cursor-pointer rounded-lg px-4 py-2 hover:text-primary-blue'>
 						FAQ
 					</li>
 				</ul>

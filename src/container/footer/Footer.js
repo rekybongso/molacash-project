@@ -10,7 +10,7 @@ import logoMolacash from "../../assets/img/logo-molacash.png";
 const Footer = () => {
 	return (
 		<>
-			<div className='mt-9 grid grid-flow-row gap-5 bg-gray-300 p-7 md:gap-1 lg:grid-flow-col lg:grid-cols-5'>
+			<div className='mt-9 grid grid-flow-row gap-5 bg-gray-300 p-7 md:gap-3 lg:grid-flow-col lg:grid-cols-5'>
 				<div>
 					<img
 						className='w-32'
@@ -21,13 +21,13 @@ const Footer = () => {
 						<div className='mt-3'>
 							<i>{LocationIcon()}</i>
 						</div>
-						<p className='mt-3 text-xs'>
-							Jl Suryo Pranoto No. 59 Petojo Selatan Gambir Jakarta Pusat DKI
-							Jakarta RT.10/RW.7, Petojo Utara Kecamatan Gambir, Kota Jakarta
-							Pusat Daerah Khusus Ibukota Jakarta 10160
+						<p className='mt-3 pr-8 text-xs'>
+							Jl. Bunisari No. 26 Gadobangkong, Ngamprah
+							<br /> Bandung Barat <br />
+							Jawa Barat - 40552
 							<br />
 							<br />
-							Hotline : 085369694646 <br />
+							Hotline : +62 851 585 00 168 <br />
 							Email : customercare@molacash.co.id
 						</p>
 					</div>

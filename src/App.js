@@ -5,7 +5,7 @@ import { GlobalContextProvider } from "./component/context/GlobalContext";
 import Footer from "./container/footer/Footer";
 import Header from "./container/header/Header";
 import Main from "./container/main/Main";
-import TopNav from "./component/Navigation/TopNav";
+import TopNav from "./component/navigation/TopNav";
 
 const App = () => {
 	return (
