@@ -8,12 +8,12 @@ import artSix from "../../assets/img/art6.svg";
 
 const CTASection = () => {
 	return (
-		<div className='mt-16 mb-16 min-h-screen'>
+		<section className='mt-16 mb-16 min-h-screen'>
 			<div id='promo' className='h-full bg-cta-pattern bg-cover'>
-				<h1 className='relative z-20 w-full pt-24 pb-7 text-center text-5xl text-white'>
+				<h3 className='relative z-20 w-full pt-24 pb-7 text-center text-3xl text-white lg:text-5xl'>
 					Kenapa Harus
-					<span className='font-bold text-secondary-blue'> Molacash?</span>
-				</h1>
+					<span className='font-bold text-secondary-blue'> Molacash? 🤔</span>
+				</h3>
 				<div className='grid w-full grid-flow-row grid-cols-1 gap-7 p-9 md:grid-cols-2 lg:grid-cols-3'>
 					<div className='flex justify-center lg:justify-end'>
 						<div className='flex flex-col items-center rounded-xl bg-gradient-radial-to-bl from-sky-300 to-white p-9 md:w-80 lg:w-72'>
@@ -81,7 +81,7 @@ const CTASection = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 

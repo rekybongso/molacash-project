@@ -13,7 +13,7 @@ const Header = () => {
 					alt='Molacash Dana Tunai'
 				/>
 				<p className='text-center italic text-gray-700 md:-mt-9 md:ml-20 md:text-left md:text-lg lg:ml-28'>
-					Pinjaman aman, Cepat, Tanpa ribet
+					Pinjaman Dana Tunai, Tidak Pernah Secepat Ini!
 				</p>
 				<img
 					className='absolute mr-56 hidden w-60 self-end lg:block'

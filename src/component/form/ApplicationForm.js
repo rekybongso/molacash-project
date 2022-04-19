@@ -7,8 +7,10 @@ import noticeIcon from "../../assets/img/notice.svg";
 
 const ApplicationForm = () => {
 	return (
-		<div className='mx-auto h-fit rounded-xl bg-gradient-radial-to-tl from-sky-300 to-white shadow-xl md:w-10/12 lg:w-1/2'>
-			<h2 className='pt-14 pb-14 text-center text-xl md:text-2xl'>
+		<div
+			id='produk'
+			className='mx-auto h-fit rounded-xl bg-gradient-radial-to-tl from-sky-300 to-white shadow-xl md:w-10/12 lg:w-1/2'>
+			<h2 className='pt-14 pb-14 text-center text-2xl md:text-2xl'>
 				Form Pinjaman Dana Tunai
 			</h2>
 			<form className='flex flex-col items-center gap-9'>

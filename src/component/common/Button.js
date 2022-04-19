@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Button = (props) => {
 	return (
 		<>
-			<button className='rounded-xl bg-primary-blue px-5 py-4 text-white hover:bg-sky-700'>
+			<button className='rounded-xl bg-primary-blue px-5 py-4 text-white hover:bg-secondary-blue'>
 				{props.buttonTitle}
 			</button>
 		</>
