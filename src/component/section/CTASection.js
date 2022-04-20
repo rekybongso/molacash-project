@@ -10,7 +10,7 @@ const CTASection = () => {
 	return (
 		<section id='promo-section' className='mt-16 mb-16 min-h-screen'>
 			<div className='h-full bg-cta-pattern bg-cover'>
-				<h3 className='relative z-20 w-full pt-24 pb-7 text-center text-3xl text-white lg:text-5xl'>
+				<h3 className='relative z-20 w-full pt-24 pb-7 text-center text-3xl text-white lg:text-4xl'>
 					Kenapa Harus
 					<span className='font-bold text-secondary-blue'> Molacash? 🤔</span>
 				</h3>

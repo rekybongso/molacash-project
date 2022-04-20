@@ -12,7 +12,7 @@ const Footer = () => {
 	return (
 		<>
 			<SubscribeSection />
-			<div className='grid grid-flow-row gap-5 bg-gray-300 p-7 md:gap-3 lg:grid-flow-col lg:grid-cols-5'>
+			<div className='grid grid-flow-row gap-5 bg-gray-300 pl-14 pb-7 pt-7 md:gap-3 lg:grid-flow-col lg:grid-cols-5'>
 				<div id='faq-section'>
 					<img
 						className='w-32'
@@ -23,7 +23,7 @@ const Footer = () => {
 						<div className='mt-3'>
 							<i>{LocationIcon()}</i>
 						</div>
-						<p className='mt-3 pr-8 text-xs'>
+						<p className='mt-3 text-xs'>
 							Jl. Bunisari No. 26 Gadobangkong, Ngamprah
 							<br /> Bandung Barat <br />
 							Jawa Barat - 40552

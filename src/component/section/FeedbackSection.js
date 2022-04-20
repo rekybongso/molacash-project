@@ -1,9 +1,48 @@
 import React from "react";
+import { useDataContext } from "../context/DataContext";
+import toast from "react-hot-toast";
+
 import Button from "../common/Button";
-import InputField from "../common/Inputfield";
+import InputField from "../common/InputField";
 import Radio from "../common/Radio";
 
 const FeedbackSection = () => {
+	const { apiStates, apiFunc } = useDataContext();
+	const { inputFeedback, isSubmitting } = apiStates;
+	const { handleFeedbackChange, postFeedbackData } = apiFunc;
+
+	const onFeedbackSubmit = (event) => {
+		event.preventDefault();
+		let promiseData = postFeedbackData();
+
+		toast.promise(
+			promiseData,
+			{
+				loading: "Mengirim feedback...",
+				success: "Feedback berhasil terkirim, terima kasih banyak",
+				error: "Gagal, silahkan coba kembali ",
+			},
+			{
+				style: {
+					padding: "17px",
+					fontWeight: "bold",
+				},
+				loading: {
+					icon: "🚀",
+					duration: 3000,
+				},
+				success: {
+					icon: "👌",
+					duration: 3000,
+				},
+				error: {
+					icon: "🙏",
+					duration: 3000,
+				},
+			}
+		);
+	};
+
 	return (
 		<section
 			id='kontak-section'
@@ -15,16 +54,42 @@ const FeedbackSection = () => {
 					Masukan Dari Kamu Sangat Berarti Bagi Kami 😊
 				</h3>
 
-				<form className='mt-9 p-5'>
+				<form className='mt-9 p-5' method='post' onSubmit={onFeedbackSubmit}>
 					<p className='font-bold lg:text-lg'>
 						Berapa penilaianmu untuk Molacash?
 					</p>
 					<div className='mt-3 flex flex-col gap-5 lg:flex-row'>
-						<Radio name='rate' title='Enggak banget' value='1' />
-						<Radio name='rate' title='Kurang deh' value='2' />
-						<Radio name='rate' title='Biasa aja' value='3' />
-						<Radio name='rate' title='Lumayan' value='4' />
-						<Radio name='rate' title='Keren abis' value='5' />
+						<Radio
+							name='rate'
+							title='Enggak banget'
+							value='1'
+							onChange={handleFeedbackChange}
+						/>
+						<Radio
+							name='rate'
+							title='Kurang deh'
+							value='2'
+							onChange={handleFeedbackChange}
+						/>
+						<Radio
+							name='rate'
+							title='Biasa aja'
+							value='3'
+							onChange={handleFeedbackChange}
+							defaultChecked={true}
+						/>
+						<Radio
+							name='rate'
+							title='Lumayan'
+							value='4'
+							onChange={handleFeedbackChange}
+						/>
+						<Radio
+							name='rate'
+							title='Keren abis'
+							value='5'
+							onChange={handleFeedbackChange}
+						/>
 					</div>
 
 					<p className='mt-9 font-bold lg:text-lg'>
@@ -32,13 +97,25 @@ const FeedbackSection = () => {
 						apakah kamu akan merekomendasikan Molacash?
 					</p>
 					<div className='mt-3 flex flex-col gap-5 lg:flex-row'>
-						<Radio name='recommendation' title='Enggak deh' value='no' />
+						<Radio
+							name='recommendation'
+							title='Enggak deh'
+							value='no'
+							onChange={handleFeedbackChange}
+						/>
 						<Radio
 							name='recommendation'
 							title='Mungkin iya, mungkin enggak'
 							value='maybe'
+							onChange={handleFeedbackChange}
+							defaultChecked={true}
 						/>
-						<Radio name='recommendation' title='Iya, boleh juga' value='yes' />
+						<Radio
+							name='recommendation'
+							title='Iya, boleh juga'
+							value='yes'
+							onChange={handleFeedbackChange}
+						/>
 					</div>
 
 					<p className='mt-9 font-bold lg:text-lg'>
@@ -48,6 +125,9 @@ const FeedbackSection = () => {
 					<InputField
 						inputName='feature'
 						inputPlaceholder='Masukan fitur yang kamu harapkan'
+						inputValue={inputFeedback.feature}
+						inputChange={handleFeedbackChange}
+						notifyMsg='Bagian ini tidak boleh kosong 😞'
 					/>
 
 					<p className='mt-9 font-bold lg:text-lg'>Alamat email</p>
@@ -56,11 +136,18 @@ const FeedbackSection = () => {
 							inputName='email'
 							inputType='email'
 							inputPlaceholder='Masukan email aktif kamu'
+							inputValue={inputFeedback.email}
+							inputChange={handleFeedbackChange}
+							notifyMsg='Bagian ini tidak boleh kosong atau Penulisan email kurang tepat, *Contoh: saya@email.com 😞'
 						/>
 					</div>
 
 					<div className='mt-14 flex justify-center'>
-						<Button buttonTitle='Kirim Ulasan' />
+						<Button
+							buttonTitle='Kirim Ulasan'
+							type='submit'
+							disabled={isSubmitting}
+						/>
 					</div>
 				</form>
 			</div>
