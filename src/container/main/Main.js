@@ -6,7 +6,7 @@ import FeedbackSection from "../../component/section/FeedbackSection";
 const Main = () => {
 	return (
 		<>
-			<div className='z-40 min-h-screen w-full md:-mt-48 lg:-mt-[22rem]'>
+			<div className='z-40 min-h-screen w-full '>
 				<ApplicationForm />
 				<CTASection />
 				<FeedbackSection />

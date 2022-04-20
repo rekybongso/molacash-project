@@ -4,6 +4,7 @@ import "./App.css";
 import { GlobalContextProvider } from "./component/context/GlobalContext";
 import { DataContextProvider } from "./component/context/DataContext";
 import { ToastContainer } from "react-toastify";
+import { BrowserRouter as Router } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 
 import Footer from "./container/footer/Footer";
@@ -15,7 +16,7 @@ const App = () => {
 	return (
 		<GlobalContextProvider>
 			<DataContextProvider>
-				<div className='min-h-screen bg-gray-50 font-inter-serif'>
+				<div className='min-h-screen bg-gray-100 font-inter-serif'>
 					<ToastContainer
 						position='top-center'
 						autoClose={3000}
@@ -27,12 +28,14 @@ const App = () => {
 						draggable
 						pauseOnHover
 					/>
-					<div className='flex flex-col place-content-between'>
-						<TopNav />
-						<Header />
-						<Main />
-						<Footer />
-					</div>
+					<Router>
+						<div className='flex flex-col place-content-between'>
+							<TopNav />
+							<Header />
+							<Main />
+							<Footer />
+						</div>
+					</Router>
 				</div>
 			</DataContextProvider>
 		</GlobalContextProvider>

@@ -1,12 +1,11 @@
 import React from "react";
 import BrandLogo from "../icons/BrandLogo";
 import SlideNav from "./SlideNav";
-import { BrowserRouter as Router } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const TopNav = () => {
 	return (
-		<Router>
+		<>
 			<nav className='hidden flex-row justify-between bg-white p-3 text-sm text-gray-700 drop-shadow-md md:flex'>
 				<ul className='flew-row ml-14 flex list-none items-center justify-between gap-7'>
 					<i className=''>{BrandLogo()}</i>
@@ -42,7 +41,7 @@ const TopNav = () => {
 				</ul>
 			</nav>
 			<SlideNav />
-		</Router>
+		</>
 	);
 };
 

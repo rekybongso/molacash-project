@@ -48,7 +48,7 @@ const SubscribeSection = () => {
 			<button
 				type='submit'
 				disabled={isSubmitting}
-				className='mt-5 rounded-full bg-orange-juice px-12 py-2 text-white hover:bg-green-tea  disabled:cursor-not-allowed disabled:bg-gray-600'>
+				className='mt-5 rounded-full bg-orange-juice px-12 py-2 text-white hover:bg-orange-600  disabled:cursor-not-allowed disabled:bg-gray-600'>
 				Subscribe
 			</button>
 		</form>
