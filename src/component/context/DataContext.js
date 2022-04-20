@@ -48,6 +48,7 @@ const DataContextProvider = (props) => {
 
 	const [inputData, setInputData] = useState(defaultApplicationData);
 	const [inputFeedback, setInputFeedback] = useState(defaultFeedbackData);
+	const [inputEmail, setInputEmail] = useState({ email: "" });
 	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	const handleDataChange = (event) => {
@@ -58,7 +59,11 @@ const DataContextProvider = (props) => {
 	const handleFeedbackChange = (event) => {
 		let { name, value } = event.target;
 		setInputFeedback({ ...inputFeedback, [name]: value });
-		console.log(inputFeedback);
+	};
+
+	const handleEmailChange = (event) => {
+		let { name, value } = event.target;
+		setInputEmail({ ...inputEmail, [name]: value });
 	};
 
 	const postApplicationData = () => {
@@ -104,19 +109,44 @@ const DataContextProvider = (props) => {
 		});
 	};
 
+	const postEmailData = () => {
+		setIsSubmitting(true);
+
+		return new Promise((resolve, reject) => {
+			client
+				.post("api/subscribers", inputEmail)
+				.then((response) => {
+					resolve();
+					console.log(response.status);
+				})
+				.catch((e) => {
+					reject();
+					console.log(e.message);
+				})
+				.finally(() => {
+					setInputEmail({ email: "" });
+					setIsSubmitting(false);
+				});
+		});
+	};
+
 	let apiStates = {
 		inputData,
 		inputFeedback,
+		inputEmail,
 		isSubmitting,
 		setInputData,
 		setInputFeedback,
+		setInputEmail,
 	};
 
 	let apiFunc = {
 		handleDataChange,
 		handleFeedbackChange,
+		handleEmailChange,
 		postApplicationData,
 		postFeedbackData,
+		postEmailData,
 	};
 
 	return (

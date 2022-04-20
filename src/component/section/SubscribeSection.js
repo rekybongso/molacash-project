@@ -1,9 +1,48 @@
 import React from "react";
+import { useDataContext } from "../context/DataContext";
+import toast from "react-hot-toast";
 
 const SubscribeSection = () => {
+	const { apiStates, apiFunc } = useDataContext();
+	const { isSubmitting, inputEmail } = apiStates;
+	const { postEmailData, handleEmailChange } = apiFunc;
+
+	const onEmailSubmit = (event) => {
+		event.preventDefault();
+		let promiseData = postEmailData();
+
+		toast.promise(
+			promiseData,
+			{
+				loading: "Mendaftarkan email ...",
+				success: "Anda telah berhasil berlangganan, terima kasih",
+				error: "Gagal, silahkan coba kembali ",
+			},
+			{
+				style: {
+					padding: "17px",
+					fontWeight: "bold",
+				},
+				loading: {
+					icon: "🚀",
+					duration: 3000,
+				},
+				success: {
+					icon: "👌",
+					duration: 3000,
+				},
+				error: {
+					icon: "🙏",
+					duration: 3000,
+				},
+			}
+		);
+	};
+
 	return (
 		<form
 			className='mt-16 flex flex-col items-center bg-primary-blue p-12'
+			onSubmit={onEmailSubmit}
 			method='post'>
 			<h3 className='text-center text-2xl text-white'>
 				Dapatkan informasi terbaru dari Molacash <br /> Subscribe sekarang 🥳
@@ -14,10 +53,23 @@ const SubscribeSection = () => {
 				type='email'
 				name='email'
 				className='mt-5 rounded-full border-2 border-secondary-blue md:w-2/5'
+				value={inputEmail.email}
+				onChange={handleEmailChange}
+				onInvalid={(event) => {
+					event.target.setCustomValidity(
+						"Bagian ini tidak boleh kosong atau Penulisan email kurang tepat, *Contoh: saya@email.com 😞"
+					);
+				}}
+				onInput={(event) => {
+					event.target.setCustomValidity("");
+				}}
 				required
 			/>
 
-			<button className='mt-5 rounded-full bg-orange-juice px-12 py-2 text-white hover:bg-green-tea'>
+			<button
+				type='submit'
+				disabled={isSubmitting}
+				className='mt-5 rounded-full bg-orange-juice px-12 py-2 text-white hover:bg-green-tea  disabled:cursor-not-allowed disabled:bg-gray-600'>
 				Subscribe
 			</button>
 		</form>
