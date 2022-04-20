@@ -1,6 +1,6 @@
 import React from "react";
 import { useDataContext } from "../context/DataContext";
-import toast from "react-hot-toast";
+import { toast } from "react-toastify";
 
 import Checkbox from "../common/Checkbox";
 import InputField from "../common/InputField";
@@ -17,32 +17,11 @@ const ApplicationForm = () => {
 		event.preventDefault();
 		let promiseData = postApplicationData();
 
-		toast.promise(
-			promiseData,
-			{
-				loading: "Mengirim pengajuan...",
-				success: "Pengajuan berhasil, silahkan cek e-mail Anda",
-				error: "Gagal, silahkan coba kembali ",
-			},
-			{
-				style: {
-					padding: "17px",
-					fontWeight: "bold",
-				},
-				loading: {
-					icon: "🚀",
-					duration: 3000,
-				},
-				success: {
-					icon: "👌",
-					duration: 3000,
-				},
-				error: {
-					icon: "🙏",
-					duration: 3000,
-				},
-			}
-		);
+		toast.promise(promiseData, {
+			pending: "Mengirim pengajuan... 🚀",
+			success: "Pengajuan berhasil, silahkan cek e-mail Anda 👌",
+			error: "Gagal, silahkan coba kembali 🙏",
+		});
 	};
 
 	return (

@@ -3,7 +3,9 @@ import "./App.css";
 
 import { GlobalContextProvider } from "./component/context/GlobalContext";
 import { DataContextProvider } from "./component/context/DataContext";
-import { Toaster } from "react-hot-toast";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import Footer from "./container/footer/Footer";
 import Header from "./container/header/Header";
 import Main from "./container/main/Main";
@@ -14,7 +16,17 @@ const App = () => {
 		<GlobalContextProvider>
 			<DataContextProvider>
 				<div className='min-h-screen bg-gray-50 font-inter-serif'>
-					<Toaster position='top-center' reverseOrder={false} />
+					<ToastContainer
+						position='top-center'
+						autoClose={3000}
+						hideProgressBar={false}
+						newestOnTop={false}
+						closeOnClick
+						rtl={false}
+						pauseOnFocusLoss
+						draggable
+						pauseOnHover
+					/>
 					<div className='flex flex-col place-content-between'>
 						<TopNav />
 						<Header />

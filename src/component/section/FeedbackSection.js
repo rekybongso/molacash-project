@@ -1,6 +1,6 @@
 import React from "react";
 import { useDataContext } from "../context/DataContext";
-import toast from "react-hot-toast";
+import { toast } from "react-toastify";
 
 import Button from "../common/Button";
 import InputField from "../common/InputField";
@@ -15,32 +15,11 @@ const FeedbackSection = () => {
 		event.preventDefault();
 		let promiseData = postFeedbackData();
 
-		toast.promise(
-			promiseData,
-			{
-				loading: "Mengirim feedback...",
-				success: "Feedback berhasil terkirim, terima kasih banyak",
-				error: "Gagal, silahkan coba kembali ",
-			},
-			{
-				style: {
-					padding: "17px",
-					fontWeight: "bold",
-				},
-				loading: {
-					icon: "🚀",
-					duration: 3000,
-				},
-				success: {
-					icon: "👌",
-					duration: 3000,
-				},
-				error: {
-					icon: "🙏",
-					duration: 3000,
-				},
-			}
-		);
+		toast.promise(promiseData, {
+			pending: "Mengirim feedback... 🚀",
+			success: "Feedback berhasil terkirim, terima kasih banyak 👌",
+			error: "Gagal, silahkan coba kembali 🙏",
+		});
 	};
 
 	return (

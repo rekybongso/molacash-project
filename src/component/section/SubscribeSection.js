@@ -1,6 +1,6 @@
 import React from "react";
 import { useDataContext } from "../context/DataContext";
-import toast from "react-hot-toast";
+import { toast } from "react-toastify";
 
 const SubscribeSection = () => {
 	const { apiStates, apiFunc } = useDataContext();
@@ -11,32 +11,11 @@ const SubscribeSection = () => {
 		event.preventDefault();
 		let promiseData = postEmailData();
 
-		toast.promise(
-			promiseData,
-			{
-				loading: "Mendaftarkan email ...",
-				success: "Anda telah berhasil berlangganan, terima kasih",
-				error: "Gagal, silahkan coba kembali ",
-			},
-			{
-				style: {
-					padding: "17px",
-					fontWeight: "bold",
-				},
-				loading: {
-					icon: "🚀",
-					duration: 3000,
-				},
-				success: {
-					icon: "👌",
-					duration: 3000,
-				},
-				error: {
-					icon: "🙏",
-					duration: 3000,
-				},
-			}
-		);
+		toast.promise(promiseData, {
+			pending: "Mendaftarkan email... 🚀",
+			success: "Anda telah berhasil berlangganan, terima kasih 👌",
+			error: "Gagal, silahkan coba kembali 🙏",
+		});
 	};
 
 	return (
