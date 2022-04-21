@@ -16,8 +16,8 @@ const CTASection = () => {
 				</h3>
 				<div className='grid w-full grid-flow-row grid-cols-1 gap-5 p-9 md:grid-cols-2 lg:grid-cols-3 lg:gap-7 xl:gap-16'>
 					<div className='flex justify-center lg:justify-end'>
-						<div className='flex flex-col items-center rounded-xl bg-gradient-radial-to-bl from-sky-300 to-white p-9 md:w-80 lg:w-72 2xl:mb-10 2xl:w-96'>
-							<img src={artOne} alt='' className='lg:w-32 2xl:w-48' />
+						<div className='flex flex-col items-center rounded-xl bg-gradient-radial-to-bl from-sky-300 to-white p-9 md:w-80 lg:w-72 2xl:mb-10 2xl:w-80'>
+							<img src={artOne} alt='' className='lg:w-32 2xl:w-36' />
 							<p className='p-5 text-center font-bold 2xl:text-xl'>
 								Proses 24 Jam
 							</p>
@@ -28,8 +28,8 @@ const CTASection = () => {
 						</div>
 					</div>
 					<div className='flex justify-center'>
-						<div className='flex flex-col items-center rounded-xl bg-gradient-radial-to-bl from-sky-300 to-white p-9 md:w-80 lg:w-72 2xl:mb-10 2xl:w-96'>
-							<img src={artTwo} alt='' className='lg:w-32 2xl:w-48' />
+						<div className='flex flex-col items-center rounded-xl bg-gradient-radial-to-bl from-sky-300 to-white p-9 md:w-80 lg:w-72 2xl:mb-10 2xl:w-80'>
+							<img src={artTwo} alt='' className='lg:w-32 2xl:w-36' />
 							<p className='p-5 text-center font-bold 2xl:text-xl'>
 								Pilihan Multifinance
 							</p>
@@ -40,8 +40,8 @@ const CTASection = () => {
 						</div>
 					</div>
 					<div className='flex justify-center lg:justify-start'>
-						<div className='flex flex-col items-center rounded-xl bg-gradient-radial-to-bl from-sky-300 to-white p-9 md:w-80 lg:w-72 2xl:mb-10 2xl:w-96'>
-							<img src={artThree} alt='' className='lg:w-32 2xl:w-48' />
+						<div className='flex flex-col items-center rounded-xl bg-gradient-radial-to-bl from-sky-300 to-white p-9 md:w-80 lg:w-72 2xl:mb-10 2xl:w-80'>
+							<img src={artThree} alt='' className='lg:w-32 2xl:w-36' />
 							<p className='p-5 text-center font-bold 2xl:text-xl'>
 								Bunga 0.9%
 							</p>
@@ -52,8 +52,8 @@ const CTASection = () => {
 						</div>
 					</div>
 					<div className='flex justify-center lg:justify-end'>
-						<div className='flex flex-col items-center rounded-xl bg-gradient-radial-to-bl from-sky-300 to-white p-9 md:w-80 lg:w-72 2xl:w-96'>
-							<img src={artFour} alt='' className='lg:w-32 2xl:w-48' />
+						<div className='flex flex-col items-center rounded-xl bg-gradient-radial-to-bl from-sky-300 to-white p-9 md:w-80 lg:w-72 2xl:w-80'>
+							<img src={artFour} alt='' className='lg:w-32 2xl:w-36' />
 							<p className='p-5 text-center font-bold 2xl:text-xl'>
 								Nilai Pencairan Besar
 							</p>
@@ -64,8 +64,8 @@ const CTASection = () => {
 						</div>
 					</div>
 					<div className='flex justify-center'>
-						<div className='flex flex-col items-center rounded-xl bg-gradient-radial-to-bl from-sky-300 to-white p-9 md:w-80 lg:w-72 2xl:w-96'>
-							<img src={artFive} alt='' className='lg:w-32 2xl:w-48' />
+						<div className='flex flex-col items-center rounded-xl bg-gradient-radial-to-bl from-sky-300 to-white p-9 md:w-80 lg:w-72 2xl:w-80'>
+							<img src={artFive} alt='' className='lg:w-32 2xl:w-36' />
 							<p className='p-5 text-center font-bold 2xl:text-xl'>
 								Hingga 60 Bulan Cicilan
 							</p>
@@ -76,8 +76,8 @@ const CTASection = () => {
 						</div>
 					</div>
 					<div className='flex justify-center lg:justify-start'>
-						<div className='flex flex-col items-center rounded-xl bg-gradient-radial-to-bl from-sky-300 to-white p-9 md:w-80 lg:w-72 2xl:w-96'>
-							<img src={artSix} alt='' className='lg:w-32 2xl:w-48' />
+						<div className='flex flex-col items-center rounded-xl bg-gradient-radial-to-bl from-sky-300 to-white p-9 md:w-80 lg:w-72 2xl:w-80'>
+							<img src={artSix} alt='' className='lg:w-32 2xl:w-36' />
 							<p className='p-5 text-center font-bold 2xl:text-xl'>
 								Persetujuan Hingga 93%
 							</p>
