@@ -31,7 +31,7 @@ const SubscribeSection = () => {
 				placeholder='Masukan Alamat Email'
 				type='email'
 				name='email'
-				className='mt-5 rounded-full border-2 border-secondary-blue md:w-2/5'
+				className='mt-5 rounded-full border-2 border-secondary-blue md:w-1/2 lg:w-1/3 2xl:w-3/12'
 				value={inputEmail.email}
 				onChange={handleEmailChange}
 				onInvalid={(event) => {

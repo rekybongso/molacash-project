@@ -101,13 +101,15 @@ const FeedbackSection = () => {
 						Fitur apa yang harus Molacash buat untuk memenuhi kebutuhan
 						finansial kamu?
 					</p>
-					<InputField
-						inputName='feature'
-						inputPlaceholder='Masukan fitur yang kamu harapkan'
-						inputValue={inputFeedback.feature}
-						inputChange={handleFeedbackChange}
-						notifyMsg='Bagian ini tidak boleh kosong 😞'
-					/>
+					<div className='w-full lg:w-3/4 2xl:w-2/3'>
+						<InputField
+							inputName='feature'
+							inputPlaceholder='Masukan fitur yang kamu harapkan'
+							inputValue={inputFeedback.feature}
+							inputChange={handleFeedbackChange}
+							notifyMsg='Bagian ini tidak boleh kosong 😞'
+						/>
+					</div>
 
 					<p className='mt-9 font-bold lg:text-lg'>Alamat email</p>
 					<div className='md:w-80'>

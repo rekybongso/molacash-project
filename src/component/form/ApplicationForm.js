@@ -34,7 +34,7 @@ const ApplicationForm = () => {
 			<form
 				className='flex flex-col items-center gap-4'
 				onSubmit={onDataSubmit}>
-				<fieldset className='w-5/6 lg:w-4/5'>
+				<fieldset className='w-5/6 lg:w-4/6'>
 					<InputField
 						inputId='input-nama-lengkap'
 						inputName='name'
@@ -47,7 +47,7 @@ const ApplicationForm = () => {
 					/>
 				</fieldset>
 
-				<fieldset className='w-5/6 lg:w-4/5'>
+				<fieldset className='w-5/6 lg:w-4/6'>
 					<InputField
 						inputName='phone_number'
 						inputLabel='Nomor Telepon'
@@ -60,7 +60,7 @@ const ApplicationForm = () => {
 					/>
 				</fieldset>
 
-				<fieldset className='w-5/6 lg:w-4/5'>
+				<fieldset className='w-5/6 lg:w-4/6'>
 					<InputField
 						inputName='email'
 						inputLabel='Alamat Email'
@@ -72,7 +72,7 @@ const ApplicationForm = () => {
 					/>
 				</fieldset>
 
-				<fieldset className='w-5/6 lg:w-4/5'>
+				<fieldset className='w-5/6 lg:w-4/6'>
 					<InputField
 						inputName='domicile'
 						inputLabel='Kota/Kabupaten Domisili'
@@ -83,7 +83,7 @@ const ApplicationForm = () => {
 					/>
 				</fieldset>
 
-				<fieldset className='w-5/6 gap-2 lg:w-4/5'>
+				<fieldset className='w-5/6 gap-2 lg:w-4/6'>
 					<p className='mb-2'>Dokumen Jaminan</p>
 					<div className='ml-5 flex flex-col gap-2'>
 						<Radio
@@ -102,7 +102,7 @@ const ApplicationForm = () => {
 					</div>
 				</fieldset>
 
-				<fieldset className='w-5/6 lg:w-4/5'>
+				<fieldset className='w-5/6 lg:w-4/6'>
 					<InputField
 						inputName='vehicle_brand'
 						inputLabel='Merek Kendaraan'
@@ -113,7 +113,7 @@ const ApplicationForm = () => {
 					/>
 				</fieldset>
 
-				<fieldset className='w-5/6 lg:w-4/5'>
+				<fieldset className='w-5/6 lg:w-4/6'>
 					<InputField
 						inputName='vehicle_model'
 						inputLabel='Model Kendaraan'
@@ -124,7 +124,7 @@ const ApplicationForm = () => {
 					/>
 				</fieldset>
 
-				<fieldset className='w-5/6 gap-2 lg:w-4/5'>
+				<fieldset className='w-5/6 gap-2 lg:w-4/6'>
 					<p className='mb-2'>Bahan Bakar Kendaraan</p>
 					<div className='ml-5 flex flex-col gap-2'>
 						<Radio
@@ -143,7 +143,7 @@ const ApplicationForm = () => {
 					</div>
 				</fieldset>
 
-				<fieldset className='w-5/6 gap-2 lg:w-4/5'>
+				<fieldset className='w-5/6 gap-2 lg:w-4/6'>
 					<p className='mb-2'>Transmisi Kendaraan</p>
 					<div className='ml-5 flex flex-col gap-2'>
 						<Radio
@@ -162,7 +162,7 @@ const ApplicationForm = () => {
 					</div>
 				</fieldset>
 
-				<fieldset className='w-5/6 gap-2 lg:w-4/5'>
+				<fieldset className='w-5/6 gap-2 lg:w-4/6'>
 					<p className='mb-2'>Jenis Roda Penggerak</p>
 					<div className='ml-5 flex flex-col gap-2'>
 						<Radio
@@ -181,7 +181,7 @@ const ApplicationForm = () => {
 					</div>
 				</fieldset>
 
-				<fieldset className='w-5/6 lg:w-4/5'>
+				<fieldset className='w-5/6 lg:w-4/6'>
 					<InputField
 						inputName='vehicle_year'
 						inputLabel='Tahun Kendaraan'
@@ -194,7 +194,7 @@ const ApplicationForm = () => {
 					/>
 				</fieldset>
 
-				<fieldset className='w-5/6 lg:w-4/5'>
+				<fieldset className='w-5/6 lg:w-4/6'>
 					<InputField
 						inputName='license_plate'
 						inputLabel='Nomor Kendaraan Bermoto'
@@ -206,7 +206,7 @@ const ApplicationForm = () => {
 					/>
 				</fieldset>
 
-				<fieldset className='mx-auto w-5/6 lg:w-4/5'>
+				<fieldset className='flex w-5/6 items-center justify-center lg:w-full'>
 					<p className='mt-5 flex w-fit flex-row items-center gap-2 rounded-xl border-2 border-yellow-400 px-6 py-2 text-center'>
 						<img src={noticeIcon} alt='An icon with exclamation mark' />
 						<span className='text-sm'>

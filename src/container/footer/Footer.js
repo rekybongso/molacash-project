@@ -15,12 +15,12 @@ const Footer = () => {
 			<div className='grid grid-flow-row gap-5 bg-gray-300 pl-14 pb-7 pt-7 md:gap-3 lg:grid-flow-col lg:grid-cols-5'>
 				<div id='faq-section'>
 					<img
-						className='w-32'
+						className='w-32 2xl:ml-5'
 						src={logoMolacash}
 						alt="Molacash's company logo"
 					/>
 					<div className='flex flex-row gap-3'>
-						<div className='mt-3'>
+						<div className='mt-3 2xl:ml-5'>
 							<i>{LocationIcon()}</i>
 						</div>
 						<p className='mt-3 text-xs'>
@@ -87,10 +87,10 @@ const Footer = () => {
 					</ul>
 				</div>
 			</div>
-			<div className='flex w-full flex-col items-center bg-gray-300'>
+			<div className='flex w-full flex-col items-center justify-center bg-gray-300'>
 				<hr className='w-11/12 border border-gray-600' />
 
-				<p className='p-7 text-sm lg:mr-6 lg:self-end'>
+				<p className='p-7 text-sm lg:mr-6 lg:self-end 2xl:mr-14'>
 					Copyright © 2022. All Rights Reserved
 				</p>
 			</div>
